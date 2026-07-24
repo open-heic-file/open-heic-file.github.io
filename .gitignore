@@ -1,0 +1,61 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Compressed & Media files (User Specified)
+*.zip
+*.7z
+*.heic
+*.HEIC
+
+
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented code coverage tools
+coverage
+*.lcov
+.nyc_output
+
+# Node modules
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Output
+.yarn-integrity
+
+# Environment variables & local configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
