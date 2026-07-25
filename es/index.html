@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open HEIC File Online - Free, Fast & Private HEIC Opener</title>
-  <meta name="description" content="Open HEIC files online in your browser for free. Fast, private local tool to view iPhone photos and convert HEIC images to JPEG.">
-  <link rel="stylesheet" href="src/style.css">
+  <title>Open HEIC File - Visor y convertidor gratuito de fotos HEIC online</title>
+  <meta name="description" content="Abre archivos HEIC y HEIF directamente en tu navegador. Rápido, privado y 100% local. Convierte fotos de iPhone a JPEG sin subir datos a servidores.">
+  <link rel="stylesheet" href="../src/style.css">
   <link rel="alternate" hreflang="en" href="https://open-heic-file.github.io/">
   <link rel="alternate" hreflang="ja" href="https://open-heic-file.github.io/ja/">
   <link rel="alternate" hreflang="ru" href="https://open-heic-file.github.io/ru/">
@@ -24,16 +24,14 @@
           <h1>Open HEIC File</h1>
         </div>
         <div class="header-actions">
-          <a href="./ja/" class="lang-switch-btn" title="日本語">JA</a>
-          <a href="./ru/" class="lang-switch-btn" title="Русский">RU</a>
-          <a href="./es/" class="lang-switch-btn" title="Español">ES</a>
-          <button id="btn-theme-toggle" class="icon-btn theme-toggle-btn" title="Toggle Light / Dark theme">
+          <a href="../" class="lang-switch-btn" title="English">English</a>
+          <button id="btn-theme-toggle" class="icon-btn theme-toggle-btn" title="Cambiar tema">
             <svg class="sun-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
         </div>
       </div>
-      <p class="subtitle">Fast, free online tool to open HEIC photos on Windows, Mac, PC & browser</p>
+      <p class="subtitle">Herramienta online rápida y gratuita para abrir fotos HEIC en tu navegador</p>
     </header>
 
     <main class="main-content">
@@ -49,18 +47,18 @@
             </svg>
           </div>
           <div class="text-group">
-            <p class="primary-text">Drop your HEIC photos here or click to browse</p>
-            <p class="secondary-text">100% private · Decoded locally in your browser without uploading</p>
+            <p class="primary-text">Arrastra tus fotos HEIC aquí o haz clic para seleccionar</p>
+            <p class="secondary-text">100% privado · Decodificación local de fotos de iPhone sin subir datos</p>
           </div>
-          <button class="btn btn-primary" id="btn-select">Open HEIC File</button>
+          <button class="btn btn-primary" id="btn-select">Abrir archivo HEIC</button>
         </div>
       </section>
 
       <!-- Loading State -->
       <div id="loading-state" class="loading-state hidden">
         <div class="spinner"></div>
-        <p id="loading-text">Opening HEIC file locally...</p>
-        <span class="loading-subtext">Decoding your photo inside your browser, no data is uploaded</span>
+        <p id="loading-text">Abriendo archivo HEIC localmente...</p>
+        <span class="loading-subtext">La decodificación se realiza en tu navegador, sin enviar datos</span>
       </div>
 
       <!-- Image Preview & Toolbar Section -->
@@ -77,32 +75,32 @@
             </div>
 
             <div class="action-buttons">
-              <button id="btn-zoom-out" class="icon-btn" title="Zoom Out (Scroll Down / -)">
+              <button id="btn-zoom-out" class="icon-btn" title="Reducir (Scroll Down / -)">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
               </button>
               <span id="zoom-level" class="zoom-level">100%</span>
-              <button id="btn-zoom-in" class="icon-btn" title="Zoom In (Scroll Up / +)">
+              <button id="btn-zoom-in" class="icon-btn" title="Ampliar (Scroll Up / +)">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
               </button>
-              <button id="btn-rotate-left" class="icon-btn" title="Rotate Counter-clockwise">
+              <button id="btn-rotate-left" class="icon-btn" title="Girar a la izquierda">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
               </button>
-              <button id="btn-rotate-right" class="icon-btn" title="Rotate Clockwise">
+              <button id="btn-rotate-right" class="icon-btn" title="Girar a la derecha">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
               </button>
-              <button id="btn-reset" class="icon-btn" title="Reset View">
+              <button id="btn-reset" class="icon-btn" title="Restablecer vista">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
               </button>
-              <button id="btn-download" class="btn btn-secondary" title="Download converted JPG image">
+              <button id="btn-download" class="btn btn-secondary" title="Descargar imagen JPG convertida">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download JPG
+                Descargar JPG
               </button>
-              <button id="btn-new-file" class="btn btn-outline" title="Open another HEIC file">Open Another</button>
+              <button id="btn-new-file" class="btn btn-outline" title="Abrir otro archivo HEIC">Abrir otro</button>
             </div>
           </div>
 
           <div class="image-stage" id="image-stage">
-            <img src="" id="demo1" alt="HEIC photo preview" class="preview-img">
+            <img src="" id="demo1" alt="Vista previa de foto HEIC" class="preview-img">
           </div>
         </div>
       </section>
@@ -113,33 +111,33 @@
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           </div>
-          <h3>Open iPhone Photos</h3>
-          <p>Easily view HEIC & HEIF photos taken on Apple iPhone and iPad directly in your browser.</p>
+          <h3>Abre fotos de iPhone</h3>
+          <p>Visualiza fácilmente fotos HEIC y HEIF tomadas con iPhone y iPad directamente en tu navegador.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>100% Private & Local</h3>
-          <p>Your photos remain completely private. All image decoding happens directly inside your browser.</p>
+          <h3>100% Privado y Local</h3>
+          <p>Tus fotos se mantienen privadas. Toda la decodificación se realiza directamente en tu navegador.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
-          <h3>Save as JPEG</h3>
-          <p>Convert HEIC pictures to standard JPG images for easy saving and sharing.</p>
+          <h3>Guardar como JPEG</h3>
+          <p>Convierte tus imágenes HEIC a formato JPG estándar para guardarlas y compartirlas fácilmente.</p>
         </div>
       </section>
     </main>
 
     <footer class="app-footer">
-      <p>Open HEIC File · Free online HEIC & HEIF image opener · <a href="./ja/" style="color: inherit; text-decoration: underline;">日本語</a> | <a href="./ru/" style="color: inherit; text-decoration: underline;">Русский</a> | <a href="./es/" style="color: inherit; text-decoration: underline;">Español</a></p>
+      <p>Open HEIC File · Visor gratuito de imágenes HEIC y HEIF online · <a href="../" style="color: inherit; text-decoration: underline;">English</a></p>
     </footer>
   </div>
 
   <!-- LoadJS script loader -->
   <script src="https://unpkg.com/loadjs@4.3.0/dist/loadjs.min.js"></script>
-  <script src="src/script.js"></script>
+  <script src="../src/script.js"></script>
 </body>
 </html>
