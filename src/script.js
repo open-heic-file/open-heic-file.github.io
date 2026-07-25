@@ -1,6 +1,7 @@
 /**
  * Minimalist HEIC Image Viewer
- * Dynamically loads heic2any library via LoadJS for client-side HEIC/HEIF decoding
+ * Dynamically loads heic2any library via LoadJS for client-side HEIC/HEIF decoding.
+ * Supports light & dark theme switching with system font defaults.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbnailBar = document.getElementById("thumbnail-bar");
   const demo1 = document.getElementById("demo1");
   const imageStage = document.getElementById("image-stage");
+
+  // Theme Toggle Elements
+  const btnThemeToggle = document.getElementById("btn-theme-toggle");
+  const sunIcon = btnThemeToggle ? btnThemeToggle.querySelector(".sun-icon") : null;
+  const moonIcon = btnThemeToggle ? btnThemeToggle.querySelector(".moon-icon") : null;
 
   // Toolbar Elements
   const fileNameEl = document.getElementById("file-name");
@@ -37,6 +43,30 @@ document.addEventListener("DOMContentLoaded", () => {
   let isDragging = false;
   let startX = 0, startY = 0;
   let translateX = 0, translateY = 0;
+
+  // === Theme Switcher (Default: Light) ===
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    if (theme === "dark") {
+      sunIcon?.classList.remove("hidden");
+      moonIcon?.classList.add("hidden");
+    } else {
+      sunIcon?.classList.add("hidden");
+      moonIcon?.classList.remove("hidden");
+    }
+  }
+
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
+
+  if (btnThemeToggle) {
+    btnThemeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      const nextTheme = currentTheme === "light" ? "dark" : "light";
+      applyTheme(nextTheme);
+    });
+  }
 
   /**
    * Helper function to dynamically load heic2any open-source library via loadjs
