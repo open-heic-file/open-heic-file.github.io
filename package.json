@@ -1,9 +1,11 @@
 {
   "name": "@open-file-online/open-heic-file",
-  "version": "1.0.0",
+  "version": "1.0.102",
   "description": "A minimalist, free online tool to open and view HEIC / HEIF photos directly in your web browser.",
   "main": "src/script.js",
   "scripts": {
+    "start": "http-server -c-1",
+    "dev": "http-server -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,5 +24,8 @@
   ],
   "author": "",
   "license": "GPL-3.0",
-  "homepage": "https://open-heic-file.github.io"
+  "homepage": "https://open-heic-file.github.io",
+  "devDependencies": {
+    "http-server": "14.1.1"
+  }
 }
