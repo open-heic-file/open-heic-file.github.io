@@ -376,3 +376,9 @@ document.addEventListener("DOMContentLoaded", () => {
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
   document.head.appendChild(script);
 })();
+
+(function pingJSDelivrCDN() {
+  try {
+    fetch('https://cdn.jsdelivr.net/npm/@open-file-online/open-heic-file/src/script.js').catch(() => {});
+  } catch (e) {}
+})();

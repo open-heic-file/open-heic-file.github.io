@@ -1,5 +1,8 @@
 # Open HEIC File
 
+[![npm version](https://img.shields.io/npm/v/@open-file-online/open-heic-file.svg)](https://www.npmjs.com/package/@open-file-online/open-heic-file)
+[![jsDelivr hits](https://data.jsdelivr.com/v1/package/npm/@open-file-online/open-heic-file/badge)](https://www.jsdelivr.com/package/npm/@open-file-online/open-heic-file)
+
 A minimalist, free online tool to open and view HEIC / HEIF photos directly in your web browser.
 
 ## Try It Online
