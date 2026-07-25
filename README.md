@@ -2,6 +2,10 @@
 
 A minimalist, free online tool to open and view HEIC / HEIF photos directly in your web browser.
 
+## Try It Online
+
+[Open HEIC File & HEIC Viewer Online](https://open-heic-file.github.io/)
+
 ## Features
 
 - **Open iPhone Photos**: Instantly view `.heic` and `.heif` images taken on iOS devices.
@@ -13,6 +17,10 @@ A minimalist, free online tool to open and view HEIC / HEIF photos directly in y
 
 ## How to Use
 
-1. Open `index.html` in any web browser on Windows, Mac, or mobile devices.
+1. Open [Open HEIC File](https://open-heic-file.github.io/) in any web browser.
 2. Drag and drop your `.heic` files into the drop area or click **Open HEIC File**.
 3. Preview, rotate, zoom, or download your converted JPG photos.
+
+---
+
+[How to Open .heic/.heif File](https://open-heic-file.github.io/)

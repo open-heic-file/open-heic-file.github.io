@@ -1,0 +1,26 @@
+{
+  "name": "open-heic-file",
+  "version": "1.0.0",
+  "description": "A minimalist, free online tool to open and view HEIC / HEIF photos directly in your web browser.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heic",
+    "heif",
+    "open-heic-file",
+    "heic-to-jpg",
+    "heic-to-png",
+    "heic-converter",
+    "heic-viewer",
+    "heic-convert",
+    "heif-to-jpg",
+    "heif-to-png",
+    "heif-converter",
+    "heif-viewer"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "homepage": "https://open-heic-file.github.io"
+}
