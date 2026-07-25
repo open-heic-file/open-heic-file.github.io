@@ -36,8 +36,9 @@ A minimalist, free online tool to open and view HEIC / HEIF photos directly in y
 
 Special thanks to these open-source projects and services:
 
-- [unpkg](https://unpkg.com/)
 - [libheif-js](https://github.com/strukturag/libheif)
+- [unpkg](https://unpkg.com/browse/@open-file-online/open-heic-file/)
+- [jsDelivr](https://www.jsdelivr.com/package/npm/@open-file-online/open-heic-file)
 
 ---
 
