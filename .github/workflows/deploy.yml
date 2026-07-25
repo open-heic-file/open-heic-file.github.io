@@ -29,6 +29,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Move file to Root
+        run: |
+          cp ja/BingSiteAuth.xml ./
+          cp ja/googlecf813e0820f5b6d3.html ./
+
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:

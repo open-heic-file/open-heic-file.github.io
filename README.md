@@ -27,6 +27,7 @@ A minimalist, free online tool to open and view HEIC / HEIF photos directly in y
 - [Japanese (日本語)](https://open-heic-file.github.io/ja/)
 - [Russian (Русский)](https://open-heic-file.github.io/ru/)
 - [Spanish (Español)](https://open-heic-file.github.io/es/)
+- [Korean (한국어)](https://open-heic-file.github.io/ko/)
 
 ## Acknowledgements
 
