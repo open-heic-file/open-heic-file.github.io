@@ -1,5 +1,5 @@
 /**
- * Minimalist HEIC Image Viewer
+ * Open HEIC File Online
  * Dynamically loads heic2any library via LoadJS for client-side HEIC/HEIF decoding.
  * Supports light & dark theme switching with system font defaults.
  */
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (validFiles.length === 0) {
-      alert("Please select valid .heic or .heif image files!");
+      alert("Please select valid HEIC / HEIF files!");
       return;
     }
 
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < validFiles.length; i++) {
       const file = validFiles[i];
       const ext = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
-      loadingText.textContent = `Converting [${i + 1}/${validFiles.length}] ${file.name}...`;
+      loadingText.textContent = `Opening [${i + 1}/${validFiles.length}] ${file.name}...`;
 
       try {
         let resultBlob;
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const url = URL.createObjectURL(resultBlob);
-        console.log("Converted Blob Object URL:", url);
+        console.log("Opened HEIC File Blob URL:", url);
 
         loadedItems.push({
           file: file,
@@ -214,8 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
           name: file.name
         });
       } catch (error) {
-        console.error(`Error converting file ${file.name}:`, error);
-        alert(`Failed to convert ${file.name}. The file might be corrupted or unsupported.`);
+        console.error(`Error opening file ${file.name}:`, error);
+        alert(`Failed to open ${file.name}. The file might be corrupted or unsupported.`);
       }
     }
 
