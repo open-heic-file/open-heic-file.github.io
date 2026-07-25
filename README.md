@@ -21,6 +21,13 @@ A minimalist, free online tool to open and view HEIC / HEIF photos directly in y
 2. Drag and drop your `.heic` files into the drop area or click **Open HEIC File**.
 3. Preview, rotate, zoom, or download your converted JPG photos.
 
+## Languages
+
+- [English](https://open-heic-file.github.io/)
+- [Japanese (日本語)](https://open-heic-file.github.io/ja/)
+- [Russian (Русский)](https://open-heic-file.github.io/ru/)
+- [Spanish (Español)](https://open-heic-file.github.io/es/)
+
 ---
 
 [How to Open .heic/.heif File](https://open-heic-file.github.io/)

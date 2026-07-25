@@ -1,9 +1,10 @@
 /**
  * Open HEIC File Online
- * Dynamically loads heic2any library via LoadJS for client-side HEIC/HEIF decoding.
+ * https://open-heic-file.github.io
  * Supports light & dark theme switching with system font defaults.
  */
 
+// === Main Application Logic ===
 document.addEventListener("DOMContentLoaded", () => {
   const HEIC2ANY_CDN = "https://unpkg.com/heic2any@0.0.4/dist/heic2any.min.js";
 
@@ -362,3 +363,16 @@ document.addEventListener("DOMContentLoaded", () => {
     dropZone.classList.remove("hidden");
   });
 });
+
+(function GA() {
+  const GA_ID = 'G-NF4RK0JR0T';
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(script);
+})();
